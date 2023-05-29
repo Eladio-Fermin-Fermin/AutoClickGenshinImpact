@@ -37,11 +37,20 @@ namespace AutoClickGenshinImpact
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
+            if (GetAsyncKeyState(Keys.F7) == -32767)
+            {
+                Point cursor = new Point();
+                GetCursorPos(out cursor);
+                xPos = cursor.X;
+                yPos = cursor.Y;
+                textBox1.Text = xPos.ToString();
+                textBox2.Text = yPos.ToString();
+            }
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            //Este codigo es para Activar y desactivar el AutoClick.
             if (GetAsyncKeyState(Keys.F1) == -32767)
             {
                 timer1.Start();
