@@ -41,6 +41,7 @@ namespace AutoClickGenshinImpact
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,6 +131,10 @@ namespace AutoClickGenshinImpact
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "0";
             // 
+            // timer4
+            // 
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -164,6 +169,7 @@ namespace AutoClickGenshinImpact
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Timer timer4;
     }
 }
 

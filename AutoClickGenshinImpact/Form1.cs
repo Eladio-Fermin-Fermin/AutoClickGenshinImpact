@@ -48,6 +48,11 @@ namespace AutoClickGenshinImpact
             }
         }
 
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             //Este codigo es para Activar y desactivar el AutoClick.
