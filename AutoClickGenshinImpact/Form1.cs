@@ -32,7 +32,7 @@ namespace AutoClickGenshinImpact
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -42,7 +42,14 @@ namespace AutoClickGenshinImpact
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-
+            if (GetAsyncKeyState(Keys.F1) == -32767)
+            {
+                timer1.Start();
+            }
+            if (GetAsyncKeyState(Keys.F2) == -32767)
+            {
+                timer1.Stop();
+            }
         }
     }
 }
