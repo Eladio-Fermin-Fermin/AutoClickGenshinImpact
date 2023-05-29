@@ -46,7 +46,7 @@ namespace AutoClickGenshinImpact
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (GetAsyncKeyState(Keys.F7) == -32767)
+            if (GetAsyncKeyState(Keys.F3) == -32767)
             {
                 Point cursor = new Point();
                 GetCursorPos(out cursor);
@@ -62,6 +62,16 @@ namespace AutoClickGenshinImpact
             int intTimer = Convert.ToInt16(trackBar1.Value);
             timer1.Interval = intTimer;
             textBox3.Text = intTimer.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(" F1 = Start.   F2 = Stop.   F3 = Fijar Coordenadas.");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void timer3_Tick(object sender, EventArgs e)
