@@ -32,7 +32,16 @@ namespace AutoClickGenshinImpact
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            Point newPoint = new Point();
+            GetCursorPos(out newPoint);
+            int x = newPoint.X;
+            int y = newPoint.Y;
+            Cursor.Position = new Point(xPos, yPos);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            Cursor.Position = new Point(x, y);
+            label1.Text = x.ToString();
+            label2.Text = y.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -50,7 +59,9 @@ namespace AutoClickGenshinImpact
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-
+            int intTimer = Convert.ToInt16(trackBar1.Value);
+            timer1.Interval = intTimer;
+            textBox3.Text = intTimer.ToString();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
